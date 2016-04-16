@@ -1,15 +1,21 @@
 package controller;
 
-import controller.operations.*;
+import controller.operations.CreateOperator;
+import controller.operations.DbOperation;
+import controller.operations.DeleteOperator;
+import controller.operations.RetrieveOperator;
+import controller.operations.UpdateOperator;
 import model.DbConnection;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 
 /**
  * Created by Fedor on 16.04.2016.
  */
 @WebService()
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT, use = SOAPBinding.Use.LITERAL)
 public class SoapService {
 
     public SoapService() {
