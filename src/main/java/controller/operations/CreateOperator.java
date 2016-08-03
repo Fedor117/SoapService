@@ -20,7 +20,6 @@ public class CreateOperator implements DbOperation {
             String sql = "INSERT INTO local_nets( name, definition)" +
                     " VALUES ('" + name +"', '" + definition + "');";
             statement.executeUpdate(sql);
-            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
